@@ -1,0 +1,56 @@
+CREATE DATABASE Student;
+CREATE DATABASE Employee;
+CREATE DATABASE Production;
+SELECT DATABASE ();
+use Employee;
+SELECT DATABASE ();
+CREATE TABLE Staff_Data
+(
+Emp_ID      INT         NOT NULL,
+First_Name  VARCHAR(25) NOT NULL,
+Last_Name   VARCHAR(25) NOT NULL,
+Sur_Name    VARCHAR(25) NULL,
+Sex         VARCHAR(2)  NOT NULL,
+Designation VARCHAR(50) NOT NULL,
+Email_ID    CHAR(255)   NOT NULL,
+D_O_J       VARCHAR(15) NOT NULL
+);
+/*DESCRIBE Staff_Data;*/
+CREATE TABLE Salary_Data
+(
+Emp_ID       INT         NOT NULL,
+First_Name   VARCHAR(25) NOT NULL,
+Last_Name    VARCHAR(25) NOT NULL,
+Sur_Name     VARCHAR(25) NULL,
+Designation  VARCHAR(50) NOT NULL,
+Salary_Cat   CHAR(3)     NOT NULL,
+T_O_P        CHAR(15)    NOT NULL,
+Salary       FLOAT       NOT NULL,
+Payment_Stat CHAR(10)     NOT NULL,
+D_O_P        VARCHAR(15) NOT NULL
+);
+/*DESCRIBE Salary_Data;*/
+INSERT INTO Staff_Data VALUES (1,'HARIPRASATH','KS',NULL,'M','MANAGER','hariprasathks6@gmail.com','2017-04-04');
+INSERT INTO Staff_Data VALUES (2,'SUTHAMATHI','A',NULL,'F','ACCOUNTANT','asuthamathi@gmail.com','2014-05-04');
+INSERT INTO Staff_Data VALUES (3,'SATHISH','KUMAR S',NULL,'M','ELECTRICIAN','sathishkumar1967@gmail.com','2014-08-04');
+/*SELECT * FROM Staff_Data;*/
+INSERT INTO Salary_Data VALUES(1,'HARIPRASATH','KS',NULL,'MANAGER','PM','BANK_CREDIT',25000,'PAID','2017-05-04');
+INSERT INTO Salary_Data VALUES(2,'SUTHAMATHI','A',NULL,'ACCOUNTANT','PM','BANK_CREDIT',20000,'PAID','2014-06-04');
+INSERT INTO Salary_Data VALUES(2,'SATHISH','KUMAR S',NULL,'ELECTRICIAN','PM','BANK_CREDIT',18000,'PAID','2014-09-04');
+/*SELECT * FROM Salary_Data;
+TRUNCATE TABLE Salary_Data;
+SELECT * FROM Salary_Data;
+SHOW TABLES;
+DROP TABLE Staff_Data;
+SHOW TABLES;*/
+SELECT DATABASE();
+use Student;
+SELECT DATABASE();
+CREATE TABLE Student_Data
+(
+Roll_No INT NOT NULL,
+First_Name CHAR(25) NOT NULL,
+Last_Name CHAR(25) NOT NULL,
+Sur_Name CHAR(25) NULL,
+
+);
