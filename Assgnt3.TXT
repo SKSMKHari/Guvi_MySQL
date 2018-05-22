@@ -1,0 +1,16 @@
+CREATE DATABASE Company;
+use Company;
+SELECT DATABASE();
+CREATE TABLE Employee
+(
+Emp_ID INT PRIMARY KEY NOT NULL,
+First_Name CHAR(25) NOT NULL,
+Last_Name CHAR(25) NOT NULL,
+Sur_Name CHAR(25) NULL,
+Designation CHAR(20) NOT NULL,
+Email_ID CHAR(255) NOT NULL
+);
+DESC Employee;
+INSERT INTO Employee VALUES(1,'HARIPRASATH','KS',NULL,'MANAGER','hariprasathks6@gmail.com');
+INSERT INTO Employee VALUES(2,'RATHNAKUMAR','S',NULL,'ENGINEER','rathna987@gmail.com');
+SELECT * FROM Employee;
