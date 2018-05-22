@@ -1,9 +1,9 @@
 CREATE DATABASE Student;
 CREATE DATABASE Employee;
 CREATE DATABASE Production;
-SELECT DATABASE ();
+
 use Employee;
-SELECT DATABASE ();
+
 CREATE TABLE Staff_Data
 (
 Emp_ID      INT         NOT NULL,
@@ -43,14 +43,62 @@ SELECT * FROM Salary_Data;
 SHOW TABLES;
 DROP TABLE Staff_Data;
 SHOW TABLES;*/
-SELECT DATABASE();
+
 use Student;
-SELECT DATABASE();
+
 CREATE TABLE Student_Data
 (
-Roll_No INT NOT NULL,
-First_Name CHAR(25) NOT NULL,
-Last_Name CHAR(25) NOT NULL,
-Sur_Name CHAR(25) NULL,
-
+Roll_No      INT         NOT NULL,
+First_Name   CHAR(25)    NOT NULL,
+Last_Name    CHAR(25)    NOT NULL,
+Sur_Name     CHAR(25)    NULL,
+Parent_Name  CHAR(40)    NOT NULL,
+Phone_Number FLOAT(12)   NOT NULL,
+Standard     INT         NOT NULL,
+Section      CHAR(2)     NOT NULL,
+Y_O_J        VARCHAR(10) NOT NULL
 );
+CREATE TABLE Student_Report
+(
+Roll_No    INT NOT  NULL,
+First_Name CHAR(25) NOT NULL,
+Last_NamE  CHAR(25) NOT NULL,
+Sur_Name   CHAR(25) NULL,
+Standard   INT      NOT NULL,
+Section    CHAR(2)  NOT NULL,
+Percentage FLOAT(5) NOT NULL,
+Status     CHAR(6)  NOT NULL
+);
+INSERT  INTO Student_Data VALUES(1,'HARIPRASATH','KS',NULL,'SATHISH KUMAR S','9488631577',12,'B3','2015');
+INSERT  INTO Student_Data VALUES(2,'RATHNAKUMAR','S',NULL,'SOUNDARARAJAN','8675752911',12,'B2','2015');
+INSERT INTO Student_Report VALUES(1,'HARIPRASATH','KS',NULL,12,'B3',78.83,'PASS');
+INSERT INTO Student_Report VALUES(2,'RATHNAKUMAR','S',NULL,12,'B3',76.83,'PASS');
+/*SELECT * FROM Student_Data;
+SELECT * FROM Student_Report;*/
+
+use Production;
+
+CREATE TABLE Production_Report
+(
+S_No             INT         NOT NULL,
+Product_Code     CHAR(10)    NOT NULL,
+Product_Name     CHAR(30)    NOT NULL,
+Description      CHAR(100)   NULL,
+Qty_Manufactured INT(5)      NOT NULL,
+D_O_M            VARCHAR(12) NOT NULL
+);
+SHOW DATABASES;
+USE Student;
+SHOW TABLES;
+USE Employee;
+SHOW TABLES;
+USE Production;
+SHOW TABLES;
+USE Student;
+SHOW TABLES;
+DROP TABLE Student_Report;
+SHOW TABLES;
+USE Production;
+DESCRIBE Production_Report;
+ALTER TABLE Production_Report ADD Sales_Percent FLOAT NOT NULL;
+DESCRIBE Production_Report;
